@@ -1,4 +1,4 @@
-# Solidity Starter
+# Aave Flashloan
 
 ## Tooling
 
@@ -83,7 +83,7 @@ Generate a test coverage report:
 $ npm run coverage
 ```
 
-### Deploy 
+### Deploy
 
 Deploy to Ropsten network:
 

@@ -3,12 +3,12 @@ import type { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 
 async function main() {
   const signers: SignerWithAddress[] = await ethers.getSigners();
-  const Greeter = await ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.connect(signers[0]).deploy("Hello World");
+  const Flashloan = await ethers.getContractFactory("Flashloan");
+  const flashloan = await Flashloan.connect(signers[0]).deploy(signers[0].address);
 
-  await greeter.deployed();
+  await flashloan.deployed();
 
-  console.log("Greeter contract deployed to:", greeter.address);
+  console.log("Flashloan contract deployed to:", flashloan.address);
 }
 
 main()
